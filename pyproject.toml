@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mabt"
+version = "0.1.0"
+description = "Multiplicity-adjusted bootstrap tilting confidence bound"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Pascal Rink" }]
+dependencies = [
+  "numpy>=1.21",
+  "scipy>=1.8",
+]
+
+[project.optional-dependencies]
+examples = ["pandas>=1.5"]
+dev = ["pytest>=7"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
