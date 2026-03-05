@@ -8,13 +8,13 @@ Pascal Rink (2025). Confidence Limits for Prediction Performance. Dissertation, 
 From GitHub (replace with your URL):
 
 ```bash
-pip install git+https://github.com/<USER>/<REPO>.git
+pip install git+https://github.com/pascalrink/prediction-performance-ci.git
 ```
 
 ## For development
 
 ```bash
-git clone https://github.com/<USER>/<REPO>.git
+git clone https://github.com/pascalrink/prediction-performance-ci.git
 cd mabt
 pip install -e .
 ```
