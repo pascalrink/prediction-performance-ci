@@ -166,7 +166,7 @@ asymptotically (see the theory in Chapter 5 of the dissertation).
 ## Limitations (current port status)
 
 - currently implemented: **accuracy** for **binary classification** with hard labels `{0,1}`
-- other performance measures (e.g., AUC) are discussed in the dissertation; extending the method may require additional theory (e.g., for U-statistics)
+- other performance measures (e.g., AUC) are discussed in the dissertation (with applications)
 
 ---
 
