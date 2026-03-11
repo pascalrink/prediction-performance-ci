@@ -52,7 +52,7 @@ def mabt_ci(true_labels, pred_labels, alpha=0.05, B=10000, seed=None):
         )
 
     # --- Helper functions ---
-    def _stratified_bootstrap_sample(rng, true_labels):
+    def _stratified_bootstrap_sample(rng, n):
         idx_all = np.arange(n)
         
         classes = np.unique(true_labels)
