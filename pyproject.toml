@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mabt"
-version = "0.1.0"
+version = "0.2.0"
 description = "Multiplicity-adjusted bootstrap tilting confidence bound"
 readme = "README.md"
 requires-python = ">=3.9"
