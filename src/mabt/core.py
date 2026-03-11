@@ -53,9 +53,9 @@ def mabt_ci(true_labels, pred_labels, alpha=0.05, B=10000, seed=None):
 
     # --- Helper functions ---
     def _stratified_bootstrap_sample(rng, true_labels):
-        idx_all = np.arange(len(true_labels))
+        idx_all = np.arange(n)
+        
         classes = np.unique(true_labels)
-
         boot_parts = []
         for cls in classes:
             idx_cls = idx_all[true_labels == cls]
