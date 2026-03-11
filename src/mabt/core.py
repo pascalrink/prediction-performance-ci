@@ -13,7 +13,7 @@ def mabt_ci(true_labels, pred_labels, alpha=0.05, B=10000, seed=None):
     Parameters
     ----------
     true_labels : array-like, shape (n,)
-        True binary labels (0 or 1).
+        True binary labels (0 or 1) or categorical labels (0, 1, 2, ... ).
     pred_labels : array-like, shape (n,) or (n, k)
         Predicted labels from k models.
     alpha : float
@@ -50,10 +50,6 @@ def mabt_ci(true_labels, pred_labels, alpha=0.05, B=10000, seed=None):
             f"true_labels ({true_labels.shape[0]}) and "
             f"pred_labels ({pred_labels.shape[0]}) have different lengths"
         )
-
-    unique_vals = np.unique(true_labels)
-    if not np.array_equal(unique_vals, [0, 1]):
-        raise ValueError(f"true_labels must contain exactly {{0, 1}}, got {unique_vals}")
 
     # --- Helper functions ---
     def _stratified_bootstrap_sample(rng, n):

@@ -1,6 +1,6 @@
 # prediction-performance-ci (`mabt`)
 
-Python package implementing **multiplicity-adjusted bootstrap tilting (MABT)** lower confidence bounds for **prediction performance after model selection** (currently: **accuracy** for binary classification).
+Python package implementing **multiplicity-adjusted bootstrap tilting (MABT)** lower confidence bounds for **prediction performance after model selection** (currently: **accuracy** for binary and categorical classification).
 
 This repository is the Python port (R → Python) of code developed for the dissertation:
 
