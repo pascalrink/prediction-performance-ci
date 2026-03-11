@@ -52,14 +52,18 @@ def mabt_ci(true_labels, pred_labels, alpha=0.05, B=10000, seed=None):
         )
 
     # --- Helper functions ---
-    def _stratified_bootstrap_sample(rng, n):
-        idx_all = np.arange(n)
-        idx0 = idx_all[true_labels == 0]
-        idx1 = idx_all[true_labels == 1]
-        boot = np.concatenate([
-            rng.choice(idx0, size=len(idx0), replace=True),
-            rng.choice(idx1, size=len(idx1), replace=True),
-        ])
+    def _stratified_bootstrap_sample(rng, true_labels):
+        idx_all = np.arange(len(true_labels))
+        classes = np.unique(true_labels)
+
+        boot_parts = []
+        for cls in classes:
+            idx_cls = idx_all[true_labels == cls]
+            boot_parts.append(
+                rng.choice(idx_cls, size=len(idx_cls), replace=True)
+            )
+
+        boot = np.concatenate(boot_parts)
         rng.shuffle(boot)
         return boot
 
